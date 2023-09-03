@@ -47,6 +47,33 @@ Lemonade ingredients - yields 48.00 servings
 
 """
 lemon_juice_cups = float(input('Enter amount of lemon juice (in cups):\n'))
+water_cups = float(input('Enter amount of water (in cups):\n'))
+agave_cups = float(input('Enter amount of agave nectar (in cups):\n'))
+servings = float(input('How many servings does this make?\n'))
+print()
+print(f'Lemonade ingredients - yields {servings:.2f} servings')
+print(f'{lemon_juice_cups:.2f} cup(s) lemon juice')
+print(f'{water_cups:.2f} cup(s) water')
+print(f'{agave_cups:.2f} cup(s) agave nectar')
+print()
+servings = int(input('How many servings would you like to make?\n'))
+lemon_juice_cups = float(servings / 3)
+water_cups = float(servings * (8/3))
+agave_cups = float(servings / 2.4)
+print()
+print(f'Lemonade ingredients - yields {servings:.2f} servings')
+print(f'{lemon_juice_cups:.2f} cup(s) lemon juice')
+print(f'{water_cups:.2f} cup(s) water')
+print(f'{agave_cups:.2f} cup(s) agave nectar')
+print()
+lemon_juice_gals = float(lemon_juice_cups / 16)
+water_gals = float(water_cups / 16)
+agave_gals = float(agave_cups / 16)
+
+print(f'Lemonade ingredients - yields {servings:.2f} servings')
+print(f'{lemon_juice_gals:.2f} gallon(s) lemon juice')
+print(f'{water_gals:.2f} gallon(s) water')
+print(f'{agave_gals:.2f} gallon(s) agave nectar')
 
 # FIXME (1): Finish reading other items into variables, then output the three ingredients
 
