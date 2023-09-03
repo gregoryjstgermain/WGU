@@ -22,3 +22,16 @@ the output is:
 Find the smallest value, and then subtract it from all three values, thus removing the gray
 """
 
+red = int(input())
+blue = int(input())
+green = int(input())
+
+colors = [red, blue, green]
+colors_sorted = colors.sort()
+least = int(colors[0])
+
+new_red = red - least
+new_blue = blue - least
+new_green = green - least
+
+print(new_red, new_blue, new_green)
