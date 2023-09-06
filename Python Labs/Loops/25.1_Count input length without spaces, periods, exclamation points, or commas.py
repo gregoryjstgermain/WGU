@@ -13,11 +13,11 @@ the output is:
 
 user_text = str(input())
 count = 0
+length = len(user_text)
 
-for x in user_text:
-    if x == " " or x == "," or x == "." or x =="!":
-        count = 0
-    else:
+for x in user_text[0:0:1]:
+    while x != " " and x != "," and x != "." and x !="!":
         count += 1
+
 
 print(count)
