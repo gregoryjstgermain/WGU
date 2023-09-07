@@ -19,11 +19,12 @@ You can assume that the list of integers will have at least 2 values.
 
 """
 
-user_input = int(input())
+user_input = 1
 input_list = []
 
 while 0 < user_input:
     user_input = int(input())
-    input_list.append(user_input)
+    if 0 < user_input:
+        input_list.append(user_input)
 
 print(f'{min(input_list)} and {max(input_list)}')
