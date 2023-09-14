@@ -26,13 +26,12 @@ Hint: Use isupper() to check if a letter is upper case.
 
 """
 
-phrase = str(input().split())
-print(phrase)
+phrase = input().split()
 acronym = str()
 
 for element in phrase:
-    if element.isupper():
-        acronym += element + '.'
+    if element[0].isupper():
+        acronym += element[0] + '.'
 
 acronym = str(acronym)
 print(acronym)
