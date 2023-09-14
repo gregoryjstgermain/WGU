@@ -34,8 +34,5 @@ for element in phrase:
     if element.isupper():
         acronym += element + '.'
 
-
-
-
 acronym = str(acronym)
 print(acronym)
