@@ -19,14 +19,17 @@ mileage economy
 
 Hint: Store each input line into a list of strings.
 
+Smaller cars get better gas mileage
+Tiny cars get great fuel economy
+
 """
 
 phrase1 = input().split()
 phrase2 = input().split()
 
-for item in phrase1:
-    if not item in phrase2:
-        print(item)
-for element in phrase2:
-    if not element in phrase1:
-        print(element)
+i = 0
+
+for item in phrase1 and phrase2:
+    if item not in phrase1 and phrase2:
+        print(phrase1[i], phrase2[i])
+    i += 1
