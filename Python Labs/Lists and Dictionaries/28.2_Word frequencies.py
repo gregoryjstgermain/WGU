@@ -22,5 +22,5 @@ lower_phrase = phrase.lower()
 mod_phrase = phrase.split()
 mod_lower_phrase = lower_phrase.split()
 
-for word in mod_lower_phrase:
-    print(word, mod_lower_phrase.count(word))
+for word in mod_phrase:
+    print(word, mod_lower_phrase.count(word.lower()))
