@@ -10,7 +10,7 @@ file1.write("Hello \n")
 file1.writelines(L)
 file1.close() # to change file access modes
 
-file1 = open("food.txt", "r+")
+file1 = open("myfile.txt", "r+")
 
 print("Output of Read function is ")
 print(file1.read())
