@@ -37,7 +37,7 @@ Beef tacos (Mexican food) -- Ground beef in freshly made tortillas
 #file1 = open("food.txt", "r")
 
 #print(file1.read())
-import re
+#import re
 
 filename = input()
 
@@ -47,10 +47,14 @@ lines = file1.readlines()
 for i in lines:
     if "Available" in i:
         i = str(i)
-        b = i.split('\t+')
-        print(b)
-        #print(i[2], f'({i[0]}) -- {i[4]}')
-        print(i)
+        a = i.strip()
+        b = a.split('   ')
+
+        #d = c.replace("Available")
+        #print(b)
+        #print(c)
+        print(b[1], f'({b[0]}) -- {b[2]}')
+        #print(i)
 
 
 
