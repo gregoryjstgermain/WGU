@@ -47,14 +47,26 @@ filename = 'movies.csv'
 with open(filename, 'r') as csvfile:
     movies = csv.reader(csvfile, delimiter=',')
 
-    i = 1
+    #i = next(movies)
     #for row in movies:
     #    print(f'Row #{row_num}:', row)
     #    row_num += 1
-    for row in movies:
-        #if row[1] == row[1]:
-        print(f"{row[1] :<44} | {row[2] :>5} | {row[0]}")
 
+    try:
+        for row in movies:
+            #row = (row, next(movies))
+            #if row[1] == row[1]:
+
+            i = next(movies)
+            #print(f"{row[1] :<44} | {row[2] :>5} | {row[0]}")
+
+            if row[1] in i:
+                print(f"{row[1] :<44s} | {row[2] :>5} | {row[0]} {i[0]}")
+            else:
+                print(f"{row[1] :<44s} | {row[2] :>5} | {row[0]}")
+
+    except StopIteration:
+        a = 10
 #file = open(filename, "r")
 #lines = file.readlines()
 
