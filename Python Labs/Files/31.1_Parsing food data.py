@@ -48,12 +48,14 @@ for i in lines:
     if "Available" in i:
         i = str(i)
         a = i.strip()
-        b = a.split('   ')
+        b = a.split('\t')
+        #c = a.split('\t')
+
 
         #d = c.replace("Available")
-        #print(b)
-        #print(c)
+        print(b)
         print(b[1], f'({b[0]}) -- {b[2]}')
+        #print(c[1], f'({c[0]}) -- {c[2]}')
         #print(i)
 
 
