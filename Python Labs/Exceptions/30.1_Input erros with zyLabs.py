@@ -38,6 +38,8 @@ No max
 
 
 """
+
+#This mostly works for the lab, just can't seem to figure the counter part
 i = 0
 try:
 
