@@ -16,7 +16,9 @@ yeH
 
 """
 phrase = str()
-
+#phrase_reversed = list()
 while phrase != "d" and phrase != "done" and phrase != "Done":
     phrase = input()
     print(phrase [::-1])
+
+#print(phrase_reversed)
