@@ -18,54 +18,38 @@ then the output is:
 
 3/1/1990
 12/13/2003
-
-
-"""
-
 date = input()
 all_dates = []
 
 new_date = date.split('\n')
 print(new_date)
 
+"""
 
-def get_month_as_int(monthString):
-
-    if monthString == 'January':
-        month_int = 1
-    elif monthString == 'February':
-        month_int = 2
-    elif monthString == 'March':
-        month_int = 3
-    elif monthString == 'April':
-        month_int = 4
-    elif monthString == 'May':
-        month_int = 5
-    elif monthString == 'June':
-        month_int = 6
-    elif monthString == 'July':
-        month_int = 7
-    elif monthString == 'August':
-        month_int = 8
-    elif monthString == 'September':
-        month_int = 9
-    elif monthString == 'October':
-        month_int = 10
-    elif monthString == 'November':
-        month_int = 11
-    elif monthString == 'December':
-        month_int = 12
-    else:
-        month_int = 0
-
-    print(month_int)
-    return month_int
-
-
-user_string = input()
-
-get_month_as_int(user_string)
-get_month_as_int(new_date)
+s=0
+d={'january':1,
+   'february':2,
+   'march':3,
+   'april':4,
+   'may':5,
+   'june':6,
+   'july':7,
+   'august':8,
+   'september':9,
+   'october':10,
+   'november':11,
+   'december':12}
+while s!='-1':
+    s=input()
+    if "," in s:
+        s = s.split(",")
+        ar = s[0].split(" ")
+        if len(ar)<2:
+            continue
+        month, date = ar[0], ar[1]
+        year = s[1].strip()
+        if d.get(month.lower()):
+            print("{}/{}/{}".format(d[month.lower()], date, year))
 
 # TODO: Read dates from input, parse the dates to find the one
 #       in the correct format, and output in m/d/yyyy format
