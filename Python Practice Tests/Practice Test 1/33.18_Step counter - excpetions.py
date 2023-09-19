@@ -38,7 +38,7 @@ def steps_to_miles(steps):
         print(f'{miles:.2f}')
         return miles
     else:
-        raise ValueError
+        raise ValueError("Exception: Negative step count entered.")
 
 
 
