@@ -15,10 +15,11 @@ yeH
 
 
 """
-phrase = str()
-#phrase_reversed = list()
-while phrase != "d" and phrase != "done" and phrase != "Done":
-    phrase = input()
-    print(phrase [::-1])
+userinput = str(input())
+stop = ['Done', 'done', 'd']
+
+while userinput not in stop:
+    print(userinput[::-1])
+    userinput = str(input())
 
 #print(phrase_reversed)
