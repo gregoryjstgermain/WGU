@@ -46,3 +46,5 @@ No synonyms for educate begin with a.
 
 
 """
+filename = input()
+synonym_letter = input()
