@@ -46,18 +46,26 @@ No synonyms for educate begin with a.
 
 
 """
-word = input()
-filename = word + ".txt"
+synonyms = {}   # Define dictionary
+s_word = input()
+filename = s_word + ".txt"
 synonym_letter = input()
 
-file1 = open(filename, "r")
-lines = file1.readlines()
+#file1 = open(filename, "r")
 
-for i in lines:
-    a = i.strip()
-    if a.startswith(synonym_letter):
-        a = a.split()
 
-        print(a)
+with open(filename, 'r') as file1:
+    lines = file1.readlines()
+    for word in lines:
+        key = word[0]
+        words = word.split()
+        synonyms[key] = words
+
+
+if synonym_letter in synonyms:
+    for i in synonyms[synonym_letter]:
+        print(i)
+else:
+    print(f'No synonyms for {s_word} begin with {synonym_letter}.')
     #else:
      #   print(f'No synonyms for {word} begin with {synonym_letter}.')
