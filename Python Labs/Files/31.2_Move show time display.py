@@ -59,12 +59,16 @@ with open(filename, 'r') as csvfile:
 
             i = next(movies)
             #print(f"{row[1] :<44} | {row[2] :>5} | {row[0]}")
-
+            if row[1] in i:
+                print("{:.44} | {:>5} | {} {}".format(row[1], row[2], row[0], i[0]))
+            else:
+                print("{:44} | {:>5} | {}".format(row[1], row[2], row[0]))
+            """
             if row[1] in i:
                 print(f"{row[1] :<44s} | {row[2] :>5} | {row[0]} {i[0]}")
             else:
                 print(f"{row[1] :<44s} | {row[2] :>5} | {row[0]}")
-
+            """
     except StopIteration:
         a = 10
 #file = open(filename, "r")
