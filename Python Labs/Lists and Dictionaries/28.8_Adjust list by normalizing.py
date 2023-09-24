@@ -16,8 +16,11 @@ the output is:
 
 """
 nums = input().split()
-max_num = float(max(nums))
 norm_nums = []
+sort_nums = sorted(nums)
+max_num = float(max(sort_nums))
+print(sort_nums)
+print(max_num)
 for x in nums:
     a = float(x) / max_num
     norm_nums.append(a)
