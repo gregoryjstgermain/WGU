@@ -15,16 +15,23 @@ the output is:
 
 
 """
-nums = input().split()
-norm_nums = []
-sort_nums = sorted(nums)
-max_num = float(max(sort_nums))
-print(sort_nums)
-print(max_num)
-for x in nums:
-    a = float(x) / max_num
-    norm_nums.append(a)
+a,b,c,d,e = input().split()
+norm_nums = [a,b,c,d,e]
+#sort_nums = sorted(nums)
+new_nums = []
+#print(sort_nums)
+#print(max_num)
 
-toStr = ' '.join([str(elem) for elem in norm_nums])
+sort_nums = sorted(norm_nums)
+max_num = float(max(sort_nums))
+print(max_num)
+print(sort_nums)
+
+for x in sort_nums:
+    a = float(x) / max_num
+    new_nums.append(a)
+
+
+toStr = ' '.join([str(elem) for elem in new_nums])
 print(toStr)
 #print(f'{norm_nums[0]:.2f} {norm_nums[1]:.2f} {norm_nums[2]:.2f} {norm_nums[3]:.2f} {norm_nums[4]:.2f} ')
