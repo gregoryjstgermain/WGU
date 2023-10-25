@@ -31,6 +31,12 @@ import random
 
 def number_guess(num):
     rando = random.randint(1, 100)
+    if num == rando:
+        print(f'{num} is correct!')
+    elif num > rando:
+        print(f'{num} is too high. Random number was {rando}.')
+    elif num < rando:
+        print(f'{num} is too low. Random number was {rando}.')
     
 
 

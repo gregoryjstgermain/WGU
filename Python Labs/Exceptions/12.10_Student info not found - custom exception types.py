@@ -127,7 +127,7 @@ if __name__ == '__main__':
             name = input()
             result = find_ID(name, student_info)
             print(result)
-        elif userChoice == "1":
+        else:
             ID = input()
             result = find_name(ID, student_info)
             print(result)
