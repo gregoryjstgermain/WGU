@@ -19,12 +19,15 @@ x1 = 7
 x2 = -5.50
 
 """
+import math
 
 
 # TODO: Import math module
 
 def quadratic_formula(a, b, c):
     # TODO: Compute the quadratic formula results in variables x1 and x2
+    x1 = (-b + math.sqrt((b * b) - (4 * a * c))) / (2 * a)
+    x2 = (-b - math.sqrt((b * b) - (4 * a * c))) / (2 * a)
     return (x1, x2)
 
 
