@@ -48,10 +48,37 @@ Averages: midterm1 83.40, midterm2 76.60, final 61.60
 
 """
 
-# TODO: Declare any necessary variables here.
+# TODO: Declare any necessary variables.
+# TODO: Read a file name from the user and read the tsv file.
+# TODO: Compute student grades and exam averages, then output results to a text file.
+
+file = input() #user file input
+grade_map = {'A': 90, 'B': 80, 'C': 70, 'D': 60, 'F': 0}
+exams = {'midterm1': [], 'midterm2': [], 'final': []}
 
 
-# TODO: Read a file name from the user and read the tsv file here.
+with open(file, 'r') as f, open('report.txt', 'w') as OUT: #open file
+    #data = f.readlines()
+    for row in f:
+        ln, fn, *scores = row.strip().split('\t')
+        scores = list(map(int, scores))
+        exams['midterm1'] += [scores[0]]
+        exams['midterm2'] += [scores[1]]
+        exams['final'] += [scores[2]]
+        average = sum(scores) / len(scores)
+        for letter in grade_map:
+            if grade_map[letter] <= average:
+                break
+        row = '\t'.join((ln, fn, *map(str, scores), letter))
+        print(row, file=OUT)
+
+    print('', file=OUT)
+
+    average1 = sum(exams['midterm1']) / len(exams['midterm1'])
+    average2 = sum(exams['midterm2']) / len(exams['midterm2'])
+    average_f = sum(exams['final']) / len(exams['final'])
+
+    print(f'Averages: midterm1 {average1:.2f}, midterm2 {average2:.2f}, final {average_f:.2f}', file=OUT)
 
 
-# TODO: Compute student grades and exam averages, then output results to a text file here.
+
