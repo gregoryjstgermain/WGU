@@ -28,6 +28,13 @@ def exact_change(user_total)
 """
 # Define your function here
 
+def exact_change(num):
+    if num <= 0:
+        print('no change')
+    elif num > 0:
+        total = num
+
+
 if __name__ == '__main__':
     input_val = int(input())
     num_pennies, num_nickels, num_dimes, num_quarters = exact_change(input_val)
