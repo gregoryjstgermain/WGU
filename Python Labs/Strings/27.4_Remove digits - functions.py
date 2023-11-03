@@ -18,10 +18,17 @@ def remove_digits(user_string)
 
 
 def remove_digits(user_string):
+    new_string = ''
+    for char in user_string:
+        if char.isalpha():
+            new_string = new_string + char
 
-
+    return new_string
 # Type your code here.
 
 
 if __name__ == '__main__':
 # Type your code here.
+
+    user_string = input()
+    print(remove_digits(user_string))
