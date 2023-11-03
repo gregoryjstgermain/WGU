@@ -36,6 +36,30 @@ values in user_values that are less than or equal to upper_threshold. Return the
 
 # Define your functions here
 
+def get_user_values():
+    num_ints = int(input())
+    count = 0
+    user_values = []
+    while count < num_ints:
+        user_input = input()
+        if user_input == '':
+            break
+        else:
+            user_values.append(user_input)
+        count += 1
+    upper_threshold = int(input())
+
+
+    return user_values, upper_threshold
+
+def ints_less_than_or_equal_to_threshold(user_values, upper_threshold):
+    vals = []
+    for val in user_values:
+        if int(val) <= upper_threshold:
+            vals.append(val)
+    #print(vals)
+    return vals
+
 if __name__ == '__main__':
     user_values, upper_threshold = get_user_values()
     res_values = ints_less_than_or_equal_to_threshold(user_values, upper_threshold)
