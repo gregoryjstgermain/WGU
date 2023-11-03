@@ -20,7 +20,7 @@ def remove_digits(user_string)
 def remove_digits(user_string):
     new_string = ''
     for char in user_string:
-        if char.isalpha():
+        if not char.isdigit():
             new_string = new_string + char
 
     return new_string
