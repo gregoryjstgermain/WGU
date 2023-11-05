@@ -27,7 +27,9 @@ next reverse_string() function call.
 # TODO: Write recursive reverse_string() function here.
 
 def reverse_string(str):
-    print()
+    rev_str = str[::-1]
+    return rev_str
+
 
 
 if __name__ == "__main__":
