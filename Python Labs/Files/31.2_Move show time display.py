@@ -40,41 +40,13 @@ Halloween                                    |     R | 19:00
 
 """
 import csv
-movie_times = {}
-#filename = input()
-filename = 'movies.csv'
+filename = input()
+#filename = 'movies.csv'
 
-with open(filename, 'r') as csvfile:
-    movies = csv.reader(csvfile, delimiter=',')
+movies = {}
+with open(filename, "r") as file:
+    for showtime, title, rating in csv.reader(file):
+        movies.setdefault((title, rating), []).append(showtime)
+for (title, rating), showtimes in movies.items():
+    print(f"{title[:44]: <44} | {rating: >5} | {' '.join(showtimes)}")
 
-    #i = next(movies)
-    #for row in movies:
-    #    print(f'Row #{row_num}:', row)
-    #    row_num += 1
-
-    try:
-        for row in movies:
-            #row = (row, next(movies))
-            #if row[1] == row[1]:
-
-            i = next(movies)
-            #print(f"{row[1] :<44} | {row[2] :>5} | {row[0]}")
-            if row[1] in i:
-                print("{:.44} | {:>5} | {} {}".format(row[1], row[2], row[0], i[0]))
-            else:
-                print("{:44} | {:>5} | {}".format(row[1], row[2], row[0]))
-            """
-            if row[1] in i:
-                print(f"{row[1] :<44s} | {row[2] :>5} | {row[0]} {i[0]}")
-            else:
-                print(f"{row[1] :<44s} | {row[2] :>5} | {row[0]}")
-            """
-    except StopIteration:
-        a = 10
-#file = open(filename, "r")
-#lines = file.readlines()
-
-#for line in lines:
-#    print(line)
-#    a = line.split(',')
-#    print(f'{a[0]}')
