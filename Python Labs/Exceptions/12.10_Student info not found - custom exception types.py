@@ -79,16 +79,20 @@ class StudentInfoError(Exception):
         self.message = message  # Initialize the exception message
 
 def find_ID(name, info):
-    #print(info[name])
-    return info[name]
+    if name in info:
+        return info[name]
+    else:
+        raise StudentInfoError(f'Student ID not found for {name}')
 
 # Type your code here.
 
 
 def find_name(ID, info):
     inv_info = {v: k for k, v in info.items()}
-    #print(inv_info[ID])
-    return inv_info[ID]
+    if ID in inv_info:
+        return inv_info[ID]
+    else:
+        raise StudentInfoError(f'Student name not found for {ID}')
 
 
 # Type your code here.
@@ -104,20 +108,6 @@ if __name__ == '__main__':
         'Caius': 'ccharlton329'
     }
 
-    student_info2 = {
-        'Gwion': 'gwarner653',
-        'Reagan': 'rebradshaw835',
-        'Edan': 'ebarret535',
-        'Ryley': 'rbarber894',
-        'Guto': 'gholder487',
-        'Peyton': 'pstott885',
-        'Tyrese': 'tmayo945',
-        'Mcauley': 'mpreston272',
-        'Caius': 'ccharlton329',
-        'Coral': 'colson812'
-    }
-
-
     userChoice = input()  # Read search option from user. 0: find_ID(), 1: find_name()
 
     # FIXME: find_ID() and find_name() may throw an Exception.
@@ -127,14 +117,16 @@ if __name__ == '__main__':
             name = input()
             result = find_ID(name, student_info)
             print(result)
+
         else:
             ID = input()
             result = find_name(ID, student_info)
             print(result)
+
         # else:
         #    raise StudentInfoError
 
-    except KeyError as StudentInfoError:
+    except StudentInfoError:
         if userChoice == "0":
             print(f'Student ID not found for {name}')
 
