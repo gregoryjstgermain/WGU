@@ -44,9 +44,6 @@ a_dist = 15.62
 b_dist = 41.85
 c_dist = 32.67
 
-tot_dist = a_dist + b_dist + c_dist
-
-total_distance = (a_dist * num_a) + (c_dist * num_c) + (c_dist * num_c)
+total_distance = (a_dist * num_a) + (b_dist * num_b) + (c_dist * num_c)
 
 print(f'Distance: {total_distance:.2f} miles')
-print(tot_dist)
