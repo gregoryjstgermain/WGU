@@ -27,3 +27,14 @@ Ounces: 3
 
 """
 
+total = int(input())
+
+tons = int((total / 16) / 2000)
+new_total = total - ((tons * 16) * 2000)
+pounds = int(new_total / 16)
+ounces = new_total - (pounds * 16)
+
+print(f'Tons: {tons}')
+print(f'Pounds: {pounds}')
+print(f'Ounces: {ounces}')
+
