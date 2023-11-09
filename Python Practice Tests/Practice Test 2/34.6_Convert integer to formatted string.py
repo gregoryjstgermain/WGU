@@ -23,5 +23,7 @@ then the expected output is
 #solution outputs formatted student identification number as a string (i.e.,"541-75-3010")
 
 original_ID = int(input())
-formatted_ID = 0
+ID = str(original_ID)
+formatted_ID = ID[0:3] + '-' + ID[3:5] + '-' + ID[5::]
+print(formatted_ID)
 
