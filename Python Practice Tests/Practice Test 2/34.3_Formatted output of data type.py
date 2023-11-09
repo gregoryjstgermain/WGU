@@ -29,3 +29,8 @@ various_data_types = [516, 112.49, True, "meow", ("Western", "Governors", "Unive
 #get name by using the built-in attribute __name__
 #solution accepts integer input representing list element index
 #solution outputs data type of list element based on input index value
+
+index = int(input())
+name = type(various_data_types[index]).__name__
+
+print(f'Element {index}: {name}')
