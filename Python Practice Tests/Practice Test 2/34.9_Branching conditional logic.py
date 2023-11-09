@@ -38,3 +38,27 @@ Frozen
 Watch out for ice!
 
 """
+#solution accepts integer input representing a water temperature
+#temperature >= 212, water state is "Boiling"
+#temperature between 115-211, exclusive of the stop, water state is "Hot"
+#temperature between 80-115, water state is "Warm"
+#temperature between 33-80, water state is "Cold"
+#temperature < 33, water state is "Frozen"
+#temperature = 212, safety comment "Caution: Hot!"
+#temperature < 33, safety comment "Watch out for ice!"
+#solution outputs the water state and potential safety comment based on temperature
+
+water_temp = int(input())
+
+if water_temp >= 212:
+    print('Boiling')
+    print('Caution: Hot!')
+elif 115 < water_temp <= 211:
+    print('Hot')
+elif 80 < water_temp < 115:
+    print('Warm')
+elif 33 < water_temp < 80:
+    print('Cold')
+elif water_temp < 33:
+    print('Frozen')
+    print('Watch out for ice!')
