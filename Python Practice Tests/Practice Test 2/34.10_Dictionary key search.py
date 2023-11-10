@@ -33,3 +33,22 @@ stocks = {'TSLA': 912.86, 'BBBY': 24.84, 'AAPL': 174.26, 'SOFI': 6.92, 'KIRK': 8
 #solution accepts an integer input representing the number of stock selections
 #solution accepts string inputs equivalent to the integer input identifying the stock selections
 #solution outputs the total cost of stock as "Total price: $" followed by the total cost to 2 decimal places
+
+count = 0
+
+num_stocks = int(input())
+input_stocks = []
+while count < num_stocks:
+    stock = str(input())
+    input_stocks.append(stock)
+    count += 1
+#print(input_stocks)
+
+stock = 0
+total_price = 0
+while stock < num_stocks:
+    total_price += stocks[input_stocks[stock]]
+    stock += 1
+
+
+print(f'Total price: ${total_price:.2f}')
