@@ -44,3 +44,18 @@ purchase = {"bananas": 1.85, "steak": 19.99, "cookies": 4.52, "celery": 2.81, "m
 #solution accepts a string input representing an item (dictionary key)
 #solution accepts an integer input representing the number of items to be purchased
 #solution outputs the item and total cost of purchase
+
+items = str(input())
+num_items = int(input())
+total = purchase[items] * num_items
+
+disc_5 = total - (0.05 * total)
+disc_10 = total - (0.10 * total)
+
+if num_items < 10:
+    print(f'{items} ${total:.2f}')
+elif 10 <= num_items <= 20:
+    print(f'{items} ${disc_5:.2f}')
+elif 21 < num_items:
+    print(f'{items} ${disc_10:.2f}')
+
