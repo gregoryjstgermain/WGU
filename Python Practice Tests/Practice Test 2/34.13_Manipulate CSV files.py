@@ -34,3 +34,17 @@ then the expected output is
 #import csv module and call open(), reader()
 #solution accepts input identifying name of CSV file (i.e., "input1.csv")
 #solution outputs each row of CSV file contents as a dictionary of elements
+
+import csv
+#file = input()
+file = 'input1.csv'
+
+d1 = {}
+d2 = {}
+with open(file) as f:
+    reader = csv.reader(f)
+    for row in reader:
+        for i in range(0, len(row), 2):
+            d1[row[i]] = row[i + 1]
+        print(d1)
+
