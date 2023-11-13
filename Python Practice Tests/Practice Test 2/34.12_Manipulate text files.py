@@ -29,3 +29,18 @@ cat chases dog
 #open, write, and read text file (e.g., "WordTextFile1.txt") using open(), write(), read()
 #solution accepts file input to insert sentence composed of file content into text file on a new line
 #solution outputs the text file contents including the new sentence
+
+#file = input()
+file = 'WordTextFile1.txt'
+phrase = ''
+
+with open(file) as f: #open file, identify it as f
+    #data = f.readlines() #store lines in file in one variable as a list
+    #print(data)
+    for line in f:
+        print(line.strip())
+        phrase = phrase + line.strip() + ' '
+    print(phrase.strip())
+
+with open(file, 'a') as f: #open file, identify it as f, set to append
+    f.write('\n' + phrase.strip())
