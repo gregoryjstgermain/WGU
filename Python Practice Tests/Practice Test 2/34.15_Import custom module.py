@@ -23,7 +23,8 @@ then the expected output is
 #one pig year is equivalent to five human years
 #solution accepts integer input representing a pig's age
 #solution outputs the human equivalent age for a pig (i.e. "8 is 40 in human years")
-#This code only works in zybooks
+#The import code initially only worked in zybooks
+#Created custom module and function so it works here
 
 import pigAge
 
