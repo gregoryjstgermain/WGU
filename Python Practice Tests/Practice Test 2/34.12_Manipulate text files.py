@@ -35,8 +35,6 @@ file = 'WordTextFile1.txt'
 phrase = ''
 
 with open(file) as f: #open file, identify it as f
-    #data = f.readlines() #store lines in file in one variable as a list
-    #print(data)
     for line in f:
         print(line.strip())
         phrase = phrase + line.strip() + ' '
